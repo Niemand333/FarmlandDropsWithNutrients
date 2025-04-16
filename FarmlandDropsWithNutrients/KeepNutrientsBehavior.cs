@@ -45,7 +45,6 @@ public class KeepNutrientsBehavior : BlockBehavior
         var hasDefaultNutrients = blockEntity.Nutrients.Zip(blockEntity.GetOriginalFertility(), (n, o) 
             => Math.Abs(n - o)).All(x => x < 0.001);
         var hasNoSlowReleaseNutrients = slowReleaseNutrients == null || slowReleaseNutrients.All(n => n < 0.001);
-        FDWNCore.Logger.Warning("hasDefaultNutrients: {0}, hasNoSlowReleaseNutrients: {1}", hasDefaultNutrients, hasNoSlowReleaseNutrients);
         if (hasDefaultNutrients && hasNoSlowReleaseNutrients)
         {
             return new[]
