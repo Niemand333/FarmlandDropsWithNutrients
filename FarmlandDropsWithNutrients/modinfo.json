@@ -6,8 +6,8 @@
         "jayu"
     ],
     "description": "Pick up and and place farmland while preserving nutrients",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "dependencies": {
-        "game": ""
+        "game": "1.21.0"
     }
 }
